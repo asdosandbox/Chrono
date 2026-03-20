@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg: #f5f5f3;
+  --bg2: #fafaf8;
+  --bg3: #ebebea;
+  --panel: #ffffff;
+  --border: #e0e0de;
+  --border2: #c8c8c5;
+  --ink: #181818;
+  --ink2: #5a5a58;
+  --ink3: #9e9e9c;
+  --accent: #2d6a4f;
+  --accent2: #40916c;
+  --up: #2d6a4f;
+  --up-bg: #f0f7f4;
+  --down: #b33a3a;
+  --down-bg: #fdf2f2;
+  --neutral: #6b6b6b;
+  --gold: #a07830;
+  --shadow: rgba(0, 0, 0, .07);
+}
+
+[data-theme="dark"] {
+  --bg: #111111;
+  --bg2: #161616;
+  --bg3: #1e1e1e;
+  --panel: #1a1a1a;
+  --border: #2a2a2a;
+  --border2: #383838;
+  --ink: #e8e8e8;
+  --ink2: #909090;
+  --ink3: #555555;
+  --accent: #52b788;
+  --accent2: #74c69d;
+  --up: #52b788;
+  --up-bg: #0a1a12;
+  --down: #e05252;
+  --down-bg: #1a0a0a;
+  --neutral: #777777;
+  --gold: #c8a850;
+  --shadow: rgba(0, 0, 0, .4);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-mono);
+}
+
+/* Density Tiers for Indicators */
+.ind-grid[data-d="xl"] .icard-head { padding: 0.75rem 0.9rem 0.3rem; }
+.ind-grid[data-d="xl"] .ic-name { font-size: 1.05rem; }
+.ind-grid[data-d="xl"] .ic-val { font-size: 1.85rem; }
+
+.ind-grid[data-d="lg"] .icard-head { padding: 0.6rem 0.8rem 0.28rem; }
+.ind-grid[data-d="lg"] .ic-name { font-size: 0.95rem; }
+.ind-grid[data-d="lg"] .ic-val { font-size: 1.45rem; }
+
+.ind-grid[data-d="md"] .icard-head { padding: 0.45rem 0.7rem 0.2rem; }
+.ind-grid[data-d="md"] .ic-name { font-size: 0.85rem; }
+.ind-grid[data-d="md"] .ic-val { font-size: 1.18rem; }
+
+.ind-grid[data-d="sm"] .icard-head { padding: 0.3rem 0.55rem 0.14rem; }
+.ind-grid[data-d="sm"] .ic-name { font-size: 0.75rem; }
+.ind-grid[data-d="sm"] .ic-val { font-size: 1rem; }
+.ind-grid[data-d="sm"] .ic-note { display: none; }
+
+.ind-grid[data-d="xs"] .icard-head { padding: 0.22rem 0.45rem 0.08rem; flex-wrap: wrap; }
+.ind-grid[data-d="xs"] .ic-name { font-size: 0.68rem; line-height: 1; }
+.ind-grid[data-d="xs"] .ic-val { font-size: 0.88rem; }
+.ind-grid[data-d="xs"] .ic-note { display: none; }

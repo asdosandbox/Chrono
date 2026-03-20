@@ -1,0 +1,7 @@
+{
+  "name": "Chronos Market Dashboard",
+  "description": "A sophisticated dashboard for global time tracking and real-time market indicators with moon phase tracking.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
